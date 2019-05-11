@@ -1,0 +1,153 @@
+body
+{
+    text-align: center;
+    background-color: lavender;
+    height: 100%;
+    width: 100%;    
+}
+h2{
+    font-size: 50px;
+    margin-top: 3%;
+}
+#clk
+{
+    border: 10px solid rgb(15, 79, 153);
+    border-radius: 20px;
+    margin: 14% 30% 0 30%;
+    text-align: center;
+    height: auto;
+    width: 40%;
+    letter-spacing: 2px;    
+    padding-top: 2%;
+    background-image: url("https://t4.ftcdn.net/jpg/01/63/81/61/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg") 
+}
+#time
+{
+    text-shadow:5px 3px 25px white;
+    color: white;
+    font-size: 80px;
+}
+#date
+{
+    float: right;
+    text-shadow:5px 3px 25px white;
+    color: white;
+    font-size: 30px;
+    margin-top: 5%
+}
+.but
+{
+    text-shadow:5px 3px 25px white;
+    height: 60px;
+    width: 250px;
+    font-size: 25px;
+    margin-top: 50px;
+    cursor: pointer;
+    background-image: url("https://t4.ftcdn.net/jpg/01/63/81/61/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg");
+    color: white;
+    border: 2px solid blue;
+    border-radius: 20px;
+}
+.model
+{
+    display: none;
+    position: fixed;
+    top: 0;
+}
+#alarmclock,#timer
+{
+    background-image: url("https://t3.ftcdn.net/jpg/01/01/96/48/240_F_101964830_VDIUaBpZGoSOJjDGKLnOSy2Zptkp8asT.jpg");
+    background-size: 100% 100%;
+    height: auto;
+    width: 40%;
+    border: 10px solid rgb(15, 79, 153);
+    margin: 14% 30% 0 30%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+}
+input
+{
+    display: block;
+    background: none;
+    margin: 30px auto;
+    font-size: 25px;
+    text-align: center;
+    width:50%;
+    color: white;
+    height: 40px;
+}
+#alarmclock button{
+    width:auto;
+    height: 35px;
+    border-radius: 10px;
+    background: #0078D7;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+#top button{
+    width: 13%;
+    height: 35px;
+    border-radius: 10px;
+    background: #0078D7;
+    border: none;
+    float: left;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+#timer button,#stopwatch button{
+    width:15%;
+    height: 35px;
+    border-radius: 10px;
+    background: #0078D7;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    margin-left: 0%;
+    cursor: pointer;
+}
+#timer button:hover, #stopwatch button:hover, #top button:hover,#alarmclock button:hover
+{
+    background-color: red;
+    color: rgb(206, 195, 50);
+}
+h4{
+    margin-top:10px;
+    color: white;
+}
+.all
+{
+    background-image: url("https://t4.ftcdn.net/jpg/01/63/81/61/240_F_163816180_aLGoLYPLBMfi3CRXLcGpEEDOUNlRWZnw.jpg");
+    background-size: 100% 100%;
+    height: 50px;  width: 300px;
+    font-size: 30px;
+    color: white;
+    margin: 10px;
+}
+#stopwatch
+{
+    background-image: url("https://t4.ftcdn.net/jpg/01/41/97/05/240_F_141970582_KDBmmT5SVty4Ng0eqL8gEoVxtMMVkhtu.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+    height: auto; 
+    width: 40%;
+    border:10px solid rgb(15, 79, 153); 
+    border-radius: 10px;
+    margin: 14% 30% 0 30%;
+    
+}
+#sth , #tth
+{
+    width: auto;
+    margin-left: 10px;
+    margin-top: 12%;    
+    font-size: 75px; 
+    color: darkred;
+    border-radius: 20px;
+}

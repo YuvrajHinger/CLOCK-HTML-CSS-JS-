@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>TIME AND DATE</title>
+        <script type="text/javascript" src="jsclk.js"></script>
+        <link rel="stylesheet" href="clk.css">
+    </head>
+    <body>
+        <div id="top">
+            <button class="btn" onclick="set(1)">Alarm</button>
+            <button class="btn" onclick="set(2)">Clock</button>
+            <button class="btn" onclick="set(3)">StopWatch</button>
+            <button class="btn" onclick="set(4)">Timer</button>
+        </div>  
+            <div class="model" id=clk>
+                <div id="time"></div>
+                <div id="date"></div>
+            </div>
+
+            <div id="alarmclock" class="model">
+                <input type="time" id="alarmtime"/>
+                <button class="btn" onclick="setalarm()">Set Alarm</button>
+            </div>
+
+            <div id="stopwatch" class="model">
+                <div id="sth"></div>				
+                <button class="btn" id="st_sp" onclick="strt(1)">Start</button>
+                <button class="btn" onclick="strt(2)">Reset</button>				
+            </div>
+            
+            <div id="timer" class="model">
+                <div id="tth"></div>
+                <input type="time" id="timerset" step="1"/>
+                <button class="btn" id="stsp" onclick="strt(3)">Start</button>
+                <button class="btn" onclick="strt(4)">Reset</button>				
+            </div>				
+
+    </body>
+
+</html>

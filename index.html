@@ -1,0 +1,183 @@
+<html>
+	<style>
+
+			.one1{
+        		background-color: #e0e0e0;
+        		border-radius: 10px; width: auto; height: 30px;
+        		padding-left: 10px; padding-top: 5px; margin-top: 10px; margin-left: 5px; margin-right: 5px;
+      		}
+     		.cls{
+        		background-color: #f44336;  color:white;
+        		border-radius: 10px; padding: 0px 5px 5px 5px;
+      		}			
+			
+		#clock{			
+			height: 100%; width: 100%;
+			border: white; border-radius: 10px;
+		}
+
+		#stopwatch{			
+			height: 100%; width: 100%;
+			border: white; border-radius: 10px;
+		}
+
+		.time{
+			background-color: silver;
+			border: solid skyblue; border-radius: 100%;	
+			height: 250px; width: 250px;					
+			margin-left: 10px; margin-top: 10px;
+		}
+
+		#TIME{
+			font-size: 75px;  margin-top: 30%;
+			color: white;
+		}		
+
+		#DATE{
+			font-size: 20px;  
+			color: white;
+		}		
+
+		#display{
+			font-size: 75px;  margin-top: 30%;
+			color: white;
+		}		
+
+		.btn{
+			font-size: 20px; border-radius: 100%; 
+		}
+
+		.model{
+			display: none; position:fixed;        
+			top: 0; left: 0; width: 100%; height: 100%;		           
+		}
+	</style>
+
+	<script>
+
+		
+		function time()
+		{
+			var current = new Date();
+			var hour = current.getHours();
+			var min = current.getMinutes();
+			var sec = current.getSeconds();
+			var day = current.getDay();
+			var date = current.getDate();
+			var month = current.getMonth();
+			var year = current.getFullYear();
+			switch(day)
+			{
+				case 0: day = "Sunday"; break;
+				case 1: day = "Monday"; break;
+				case 2: day = "Tuesday"; break;
+				case 3: day = "Wednesday"; break;
+				case 4: day = "Thrusday"; break;
+				case 5: day = "Friday"; break;
+				case 6: day = "Saturday"; break;
+			}
+			switch(month)
+			{
+				case 0: month = "January"; break;
+				case 1: month = "February"; break;
+				case 2: month = "March"; break;
+				case 3: month = "April"; break;
+				case 4: month = "May"; break;
+				case 5: month = "June"; break;
+				case 6: month = "July"; break;
+				case 7: month = "August"; break;
+				case 8: month = "September"; break;
+				case 9: month = "October"; break;
+				case 10: month = "November"; break;
+				case 11: month = "December"; break;							
+			}
+			document.getElementById('TIME').innerHTML = hour + ":" + min + ":" + sec;			
+			document.getElementById('DATE').innerHTML = day + "," + date + " " + month;			
+		}
+		function clock()
+		{
+			document.getElementById('clock').style.display='block';
+			setInterval(time,1000);	
+		}
+		function stpwch()
+		{
+			document.getElementById('stopwatch').style.display='block';
+			var hr=00,mn=00,sc=00;
+			document.getElementById('display').innerHTML = hr + ":" + mn + ":" + sc;				
+		}
+		function start()
+		{ 
+			hr=00,mn=00,sc=00;
+			var uv=setInterval(stpwatch,1000); 
+		}	
+		function stop()
+		{
+			clearInterval(uv);
+			document.getElementById('display').innerHTML = hr + ":" + mn + ":" + sc;			
+		}
+		function reset()
+		{
+			clearInterval(uv);
+			hr=00,mn=00,sc=00;
+			document.getElementById('display').innerHTML = hr + ":" + mn + ":" + sc;			
+		}
+		function stpwatch()							
+		{			
+			document.getElementById('display').innerHTML = hr + ":" + mn + ":" + sc;			
+			++sc;
+			if(sc==60)
+			{ sc=00; ++mn;
+			  if(mn==60)
+			  { mn=00; ++hr; }
+			}
+		}
+		function back()
+		{
+			document.getElementById('stopwatch').style.display='none';
+			clearInterval(uv);
+		}
+		
+	</script>	
+
+	<body>
+
+		<div class="all">
+			<button class="hm" onclick="clock()">WORLD CLOCK</button>
+			<button class="hm" onclick="stpwch()">STOPWATCH</button>
+		</div>
+		
+		<div id="clock" class="model">
+
+					<div class="one1">
+						<a  onclick="document.getElementById('clock').style.display='none'" class="cls">BACK</a>		
+					</div>						
+			<div class="time" align="middle">
+				<div id="TIME"></div>								
+				<div id="DATE"></div>
+			</div>				
+		</div>
+		
+		<div id="stopwatch" class="model">
+					<div class="one1">
+						<a  onclick="back()" class="cls">BACK</a>		
+					</div>						
+			<div class="time" align="middle">
+				<div id="display"></div>				
+					<button class="btn" onclick="start()">Start</button>
+					<button class="btn" onclick="stop()">Stop</button>
+					<button class="btn" onclick="reset()">Reset</button>				
+			</div>				
+		</div>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
